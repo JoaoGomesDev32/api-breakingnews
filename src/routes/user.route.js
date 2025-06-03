@@ -1,6 +1,8 @@
-const route = require("express").Router();
-const userController = require("../controllers/user.controller");
+import { Router } from "express";
+import userController from "../controllers/user.controller.js";
 
-route.get("/", userController.soma);
+const userRouter = Router();
 
-module.exports = route;
+userRouter.post("/", userController.create);
+
+export default userRouter;
