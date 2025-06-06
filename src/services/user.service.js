@@ -1,7 +1,13 @@
 import User from "../models/User.js";
 
-const create = (body) => User.create(body);
+const createService = (body) => User.create(body);
+
+const findAllService = () => User.find();
+
+const findByIdService = (id) => User.findById(id);
 
 export default {
-  create,
+  createService,
+  findAllService,
+  findByIdService,
 };
